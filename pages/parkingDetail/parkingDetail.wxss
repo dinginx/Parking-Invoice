@@ -1,0 +1,31 @@
+.container {
+  padding: 20rpx;
+}
+
+.parking-info {
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.parking-name {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.parking-address, .parking-available, .parking-price {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.start-parking-btn {
+  background-color: #007aff;
+  color: #fff;
+  border: none;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+}

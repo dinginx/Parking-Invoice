@@ -1,0 +1,9 @@
+<view class="container" wx:if="{{parkingInfo}}">
+  <view class="parking-info">
+    <text class="parking-name">{{parkingInfo.name}}</text>
+    <text class="parking-address">地址: {{parkingInfo.address}}</text>
+    <text class="parking-available">可用车位: {{parkingInfo.availableSpots}}/{{parkingInfo.totalSpots}}</text>
+    <text class="parking-price">价格: ¥{{parkingInfo.pricePerHour}}/小时</text>
+  </view>
+  <button class="start-parking-btn" bindtap="startParking">开始停车</button>
+</view>

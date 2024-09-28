@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/parkingDetail/parkingDetail",
+    "pages/payment/payment",
+    "pages/invoice/invoice",
+    "pages/userCenter/userCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#007AFF",
+    "navigationBarTitleText": "停车发票系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#007AFF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "停车场",
+        "iconPath": "assets/images/parking_inactive.png",
+        "selectedIconPath": "assets/images/parking_active.png"
+      },
+      {
+        "pagePath": "pages/invoice/invoice",
+        "text": "发票",
+        "iconPath": "assets/images/invoice_inactive.png",
+        "selectedIconPath": "assets/images/invoice_active.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "assets/images/user_inactive.png",
+        "selectedIconPath": "assets/images/user_active.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于查找附近的停车场"
+    }
+  },
+  "usingComponents": {},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "navigateToMiniProgramAppIdList": []
+}

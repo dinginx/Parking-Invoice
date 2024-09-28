@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="header">
+    <text class="title">附近停车场</text>
+  </view>
+  <view class="parking-list">
+    <block wx:for="{{parkingLots}}" wx:key="id">
+      <view class="parking-item" bindtap="goToParkingDetail" data-id="{{item.id}}">
+        <text class="parking-name">{{item.name}}</text>
+        <text class="parking-available">可用车位: {{item.availableSpots}}</text>
+        <text class="parking-price">¥{{item.pricePerHour}}/小时</text>
+      </view>
+    </block>
+  </view>
+</view>

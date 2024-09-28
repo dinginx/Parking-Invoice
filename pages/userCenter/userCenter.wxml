@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="header">
+    <image class="bg-image" src="/assets/images/backgrounds/user-bg.jpg" mode="aspectFill"></image>
+    <view class="user-info">
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+      <view class="user-details">
+        <text class="nickname">{{userInfo.nickName}}</text>
+        <text class="user-id">ID: {{userInfo.id}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="wallet-card">
+      <view class="wallet-header">
+        <text class="wallet-title">我的钱包</text>
+        <text class="wallet-balance">¥ {{userInfo.balance}}</text>
+      </view>
+      <view class="wallet-actions">
+        <button class="wallet-btn recharge" bindtap="recharge">
+          <text class="btn-text">充值</text>
+        </button>
+        <button class="wallet-btn withdraw" bindtap="withdraw">
+          <text class="btn-text">提现</text>
+        </button>
+      </view>
+    </view>
+
+    <view class="menu-list">
+      <view class="menu-item" bindtap="editUserInfo">
+        <view class="menu-icon-wrapper">
+          <image class="menu-icon" src="/assets/images/icons/edit.png"></image>
+        </view>
+        <text class="menu-text">编辑个人信息</text>
+        <image class="arrow-icon" src="/assets/images/icons/arrow-right.png"></image>
+      </view>
+      <view class="menu-item" bindtap="viewParkingHistory">
+        <view class="menu-icon-wrapper">
+          <image class="menu-icon" src="/assets/images/icons/history.png"></image>
+        </view>
+        <text class="menu-text">停车记录</text>
+        <image class="arrow-icon" src="/assets/images/icons/arrow-right.png"></image>
+      </view>
+      <view class="menu-item" bindtap="contactCustomerService">
+        <view class="menu-icon-wrapper">
+          <image class="menu-icon" src="/assets/images/icons/service.png"></image>
+        </view>
+        <text class="menu-text">联系客服</text>
+        <image class="arrow-icon" src="/assets/images/icons/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <button class="logout-btn" bindtap="logout">
+      <text class="btn-text">退出登录</text>
+    </button>
+  </view>
+</view>

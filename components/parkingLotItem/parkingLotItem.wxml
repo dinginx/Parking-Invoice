@@ -1,0 +1,7 @@
+<view class="parking-item">
+  <view class="parking-name">{{parking.name}}</view>
+  <view class="parking-info">
+    <text>可用车位: {{parking.availableSpots}}</text>
+    <text>距离: {{parking.distance}}km</text>
+  </view>
+</view>

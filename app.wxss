@@ -1,0 +1,4 @@
+/* 全局样式 */
+.container {
+  padding: 20rpx;
+}

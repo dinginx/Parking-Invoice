@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="header">
+    <text class="title">发票管理</text>
+  </view>
+  
+  <view class="filter-section">
+    <picker mode="date" start="2024-01-01" end="2024-12-31" bindchange="onDateFilterChange">
+      <view class="picker">
+        日期筛选：{{dateFilter || '全部'}}
+      </view>
+    </picker>
+    <picker bindchange="onStatusFilterChange" value="{{statusFilterIndex}}" range="{{statusFilterOptions}}">
+      <view class="picker">
+        状态筛选：{{statusFilterOptions[statusFilterIndex]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="invoice-list">
+    <block wx:for="{{filteredInvoices}}" wx:key="id">
+      <view class="invoice-item">
+        <view class="invoice-details">
+          <text class="invoice-date">日期: {{item.createdAt}}</text>
+          <text class="invoice-amount">金额: ¥{{item.amount}}</text>
+          <text class="invoice-status {{item.status === '已开具' ? 'status-issued' : 'status-pending'}}">
+            状态: {{item.status}}
+          </text>
+        </view>
+        <view class="invoice-actions">
+          <button wx:if="{{item.status === '待申请'}}" class="apply-btn" bindtap="requestInvoice" data-id="{{item.id}}">
+            申请发票
+          </button>
+          <button wx:if="{{item.status === '已开具'}}" class="download-btn" bindtap="downloadInvoice" data-id="{{item.id}}">
+            下载发票
+          </button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="no-invoice" wx:if="{{filteredInvoices.length === 0}}">
+    <text>暂无符合条件的发票</text>
+  </view>
+
+  <view class="pagination" wx:if="{{filteredInvoices.length > 0}}">
+    <button class="pagination-btn" disabled="{{currentPage === 1}}" bindtap="onPreviousPage">上一页</button>
+    <text class="page-info">{{currentPage}} / {{totalPages}}</text>
+    <button class="pagination-btn" disabled="{{currentPage === totalPages}}" bindtap="onNextPage">下一页</button>
+  </view>
+</view>

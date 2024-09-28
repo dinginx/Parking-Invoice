@@ -1,0 +1,31 @@
+.container {
+  padding: 20rpx;
+}
+
+.payment-info {
+  background-color: #f8f8f8;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.payment-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.payment-amount {
+  font-size: 32rpx;
+  color: #ff6600;
+  margin-top: 10rpx;
+  display: block;
+}
+
+.pay-btn {
+  background-color: #09bb07;
+  color: #fff;
+  border: none;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+}

@@ -1,0 +1,7 @@
+<view class="container" wx:if="{{paymentInfo}}">
+  <view class="payment-info">
+    <text class="payment-title">支付详情</text>
+    <text class="payment-amount">金额: ¥{{paymentInfo.amount}}</text>
+  </view>
+  <button class="pay-btn" bindtap="payNow">立即支付</button>
+</view>
